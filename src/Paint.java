@@ -1,6 +1,5 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
+/**
+ * Created by phamv8616 on 5/11/2017.
+ */
 public class Paint {
 }
