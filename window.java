@@ -2,16 +2,19 @@ import java.awt.FlowLayout;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Color;
-import java.awt.Frame;
+import java.awt.event.*;
 
 public class window
 {
+	
 	public static void main(String[]args)
 	{
 		JFrame window = new JFrame("JFrame");
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(new FlowLayout());
+		
+		panel.setBackground(Color.white);
 		
 		Dimension d = new Dimension(100,80);
 		
