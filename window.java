@@ -57,6 +57,8 @@ public class window
 		panel.add(buttonFive);
 		panel.add(buttonSix);
 		
+		
+		
 		window.add(panel);
 		window.setSize(700,800);
 		window.setLocationRelativeTo(null);
