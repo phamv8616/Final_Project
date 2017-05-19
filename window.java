@@ -40,7 +40,8 @@ public class window
 		
 		JButton buttonFive = new JButton();
 		buttonFive.setText("BLUE");
-		buttonFive.setBackground(Color.blue);
+		Color myBlue = new Color(30,144,255);
+		buttonFive.setBackground(myBlue);
 		buttonFive.setPreferredSize(d);
 	
 		
@@ -50,14 +51,33 @@ public class window
 		buttonSix.setBackground(myPurple);
 		buttonSix.setPreferredSize(d);
 		
+		JButton buttonSeven = new JButton();
+		buttonSeven.setText("PINK");
+		Color myPink = new Color(255,105,180);
+		buttonSeven.setBackground(myPink);
+		buttonSeven.setPreferredSize(d);
+		
+		JButton buttonEight = new JButton();
+		buttonEight.setText("BLACK");
+		buttonEight.setForeground(Color.white);
+		buttonEight.setBackground(Color.black);
+		buttonEight.setPreferredSize(d);
+		
+		JButton buttonNine = new JButton();
+		buttonNine.setText("ERASER");
+		buttonNine.setBackground(Color.white);
+		buttonNine.setPreferredSize(d);
+		
+		
 		panel.add(buttonOne);
 		panel.add(buttonThree);
 		panel.add(buttonTwo);
 		panel.add(buttonFour);
 		panel.add(buttonFive);
 		panel.add(buttonSix);
-		
-		
+		panel.add(buttonSeven);
+		panel.add(buttonEight);
+		panel.add(buttonNine);
 		
 		window.add(panel);
 		window.setSize(700,800);
@@ -65,4 +85,5 @@ public class window
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
 	}
+
 }
