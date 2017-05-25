@@ -11,11 +11,11 @@ public class Paint
 		//drawing
 		Container content = frame.getContentPane();
 		content.setLayout(new BorderLayout());
-		final Draw drawPad = new Draw();
-		content.add(drawPad, BorderLayout.CENTER);
+		Draw drawPad = new Draw();
+		content.add(drawPad);
 		
-		frame.setSize(1000,1000);
-		frame.setLocation(100,100);
+		frame.setSize(800,500);
+		// frame.setLocation(100,100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
@@ -25,7 +25,6 @@ public class Paint
 		// panel.setMinimumSize(new Dimension(32,68));
 		// panel.setMaximumSize(new Dimension(32,68));
 		panel.setBackground(Color.white);
-		frame.add(panel);
 		
 		//buttons
 		Dimension d = new Dimension(100,80);
@@ -61,6 +60,7 @@ public class Paint
 		panel.add(buttonTwo);
 		panel.add(buttonFour);
 		panel.add(buttonFive);
+		frame.add(panel);
 	}
 }
 
