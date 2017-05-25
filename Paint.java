@@ -11,7 +11,7 @@ public class Paint
 		//drawing
 		Container content = frame.getContentPane();
 		content.setLayout(new BorderLayout());
-		final PadDraw drawPad = new PadDraw();
+		final Draw drawPad = new Draw();
 		content.add(drawPad, BorderLayout.CENTER);
 		
 		frame.setSize(1000,1000);

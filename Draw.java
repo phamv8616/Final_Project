@@ -2,13 +2,13 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PadDraw extends JComponent
+public class Draw extends JComponent
 {
 	Graphics2D graph2D;
 	Image i;
 	int firstX, firstY, secondX, secondY;
 	
-	public PadDraw()
+	public Draw()
 	{
 		setDoubleBuffered(false);
 		addMouseListener(new MouseAdapter()
@@ -29,12 +29,12 @@ public class PadDraw extends JComponent
 				if(graph2D != null)
 				{
 					graph2D.drawLine(secondX, secondY, firstX, firstY);
-					repaint();
-					secondX = firstX;
-					secondY = firstY;
+					
+					
 				}
-				
-				
+				repaint();
+				secondX = firstX;
+				secondY = firstY;
 			
 				
 				// secondX = firstY;
