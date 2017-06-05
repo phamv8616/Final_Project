@@ -52,9 +52,6 @@ public class button{
 		panel.add(blue);
 		panel.add(orange);
 		panel.add(pink);
-		panel.add(yellow);
-		
-		
-		
+		panel.add(yellow);	
 	}
 }
