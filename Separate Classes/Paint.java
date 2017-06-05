@@ -21,24 +21,15 @@ public class Paint
 		container.setLayout(new BorderLayout());
 		Draw1 drawing = new Draw1();
 	
-		
-		frame.setSize(850,800);
+		frame.setResizable(true);
+		frame.setSize(900,800);
 		frame.setLocation(100,100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-		// frame.setResizable(false);
 		
 		JPanel buttonPanel = new JPanel();
-		// panel1.setBounds(100, 100, 100, 140);
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 		buttonPanel.setPreferredSize(new Dimension(100,68));
-		
-		// panel1.setLayout(new FlowLayout());
-		// panel2.setLayout(new FlowLayout());
-		// panel.setPreferredSize(new Dimension(32,68));
-		// panel.setMinimumSize(new Dimension(32,68));
-		// panel.setMaximumSize(new Dimension(32,68));
-		// panel1.setBackground(Color.white);
 		
 		//buttons
 		Dimension d = new Dimension(120,70);
@@ -151,7 +142,7 @@ public class Paint
 		eraser.setBackground(Color.white);
 		eraser.setMinimumSize(d);
 		eraser.setMaximumSize(d);
-		buttonSeven.addActionListener(new ActionListener()
+		eraser.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
@@ -164,7 +155,6 @@ public class Paint
 		
 		ImageIcon one = new ImageIcon("brush1.jpg");
 		JButton brushOne = new JButton(one);
-		// brushOne.setPreferredSize(d);
 		brushOne.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -177,7 +167,6 @@ public class Paint
 		
 		ImageIcon two = new ImageIcon("brush2.jpg");
 		JButton brushTwo = new JButton(two);
-		// brushTwo.setPreferredSize(d);
 		brushTwo.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -190,7 +179,6 @@ public class Paint
 		
 		ImageIcon three = new ImageIcon("brush3.jpg");
 		JButton brushThree = new JButton(three);
-		// brushThree.setPreferredSize(d);
 		brushThree.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -213,7 +201,6 @@ public class Paint
 		buttonPanel.add(brushTwo);
 		buttonPanel.add(brushThree);
 		
-		// container.setLayout(new GridLayout(1,2));
 		container.add(buttonPanel, BorderLayout.WEST);
 		container.add(drawing, BorderLayout.CENTER);
 	}

@@ -7,7 +7,7 @@ public class Draw1 extends JComponent
 	Image image;
 	Graphics2D graph2D;
 	int currentX, currentY, oldX, oldY;
-	static int brushSize = 2;
+	static int brushSize=1;
 
 	public Draw1(){
 		setDoubleBuffered(false);
