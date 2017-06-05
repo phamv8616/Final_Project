@@ -7,6 +7,7 @@ public class Draw1 extends JComponent
 	Image image;
 	Graphics2D graph2D;
 	int currentX, currentY, oldX, oldY;
+	static int brushSize = 2;
 
 	public Draw1(){
 		setDoubleBuffered(false);
@@ -23,6 +24,7 @@ public class Draw1 extends JComponent
 		{
 			public void mouseDragged(MouseEvent e)
 			{
+				graph2D.setStroke(new BasicStroke(brushSize));
 				currentX = e.getX();
 				currentY = e.getY();
 				if(graph2D != null)
@@ -30,6 +32,18 @@ public class Draw1 extends JComponent
 				repaint();
 				oldX = currentX;
 				oldY = currentY;
+				
+				// Graphics2D g = (Graphics2D)graph2D;
+				
+				
+				// int brushSize;
+                // brushSize = brush;
+
+                // graph2D.fillOval((oldX - (brushSize / 2)), (oldY - (brushSize / 2)), brushSize, brushSize);
+                // repaint();
+
+                // oldX = currentX;
+                // oldY = currentY;
 			}
 
 		});
@@ -38,6 +52,8 @@ public class Draw1 extends JComponent
 
 	public void paintComponent(Graphics g)
 	{
+		// Graphics2D g2 = (Graphics2D)g;
+		// g2.setStroke(new Basic Stroke(2));
 		if(image == null)
 		{
 			image = createImage(getSize().width, getSize().height);
@@ -97,5 +113,10 @@ public class Draw1 extends JComponent
 		Color myBlue = new Color(30,144,255);
 		graph2D.setPaint(myBlue);
 		
+	}
+	
+	public void eraser()
+	{
+		graph2D.setPaint(Color.white);
 	}
 }
