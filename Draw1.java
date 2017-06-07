@@ -27,7 +27,6 @@ public class Draw1 extends JComponent
 				graph2D.setStroke(new BasicStroke(brushSize));
 				currentX = e.getX();
 				currentY = e.getY();
-				if(graph2D != null)
 				graph2D.drawLine(oldX, oldY, currentX, currentY);
 				repaint();
 				oldX = currentX;
@@ -56,24 +55,6 @@ public class Draw1 extends JComponent
 		graph2D.fillRect(0, 0, getSize().width, getSize().height);
 		graph2D.setPaint(Color.black);
 		repaint();
-	}
-	
-	public void rectangle()
-	{
-		addMouseMotionListener(new MouseMotionAdapter()
-		{
-			public void mouseDragged(MouseEvent e)
-			{
-				graph2D.setStroke(new BasicStroke(brushSize));
-				currentX = e.getX();
-				currentY = e.getY();
-				if(graph2D != null)
-				repaint();
-				// oldX = currentX;
-				// oldY = currentY;
-			}
-
-		});
 	}
 
 	public void black()

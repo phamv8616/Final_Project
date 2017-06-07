@@ -32,17 +32,6 @@ public class Paint
 		buttonPanel.setPreferredSize(new Dimension(100,100));
 		
 		JPanel panel2 = new JPanel();
-		JButton b = new JButton();
-		b.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				drawing.rectangle();
-			}
-
-		}
-		);
-		panel2.add(b);
 		
 		//buttons
 		Dimension d = new Dimension(120,70);
@@ -195,7 +184,7 @@ public class Paint
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.brushSize = 10;
+				drawing.brushSize = 30;
 			}
 
 		}
