@@ -7,7 +7,7 @@ public class Draw1 extends JComponent
 	Image image;
 	Graphics2D graph2D;
 	int currentX, currentY, oldX, oldY;
-	static int brushSize=1;
+	static int brushSize=2;
 
 	public Draw1(){
 		setDoubleBuffered(false);
@@ -32,18 +32,6 @@ public class Draw1 extends JComponent
 				repaint();
 				oldX = currentX;
 				oldY = currentY;
-				
-				// Graphics2D g = (Graphics2D)graph2D;
-				
-				
-				// int brushSize;
-                // brushSize = brush;
-
-                // graph2D.fillOval((oldX - (brushSize / 2)), (oldY - (brushSize / 2)), brushSize, brushSize);
-                // repaint();
-
-                // oldX = currentX;
-                // oldY = currentY;
 			}
 
 		});
@@ -52,8 +40,6 @@ public class Draw1 extends JComponent
 
 	public void paintComponent(Graphics g)
 	{
-		// Graphics2D g2 = (Graphics2D)g;
-		// g2.setStroke(new Basic Stroke(2));
 		if(image == null)
 		{
 			image = createImage(getSize().width, getSize().height);
@@ -71,47 +57,63 @@ public class Draw1 extends JComponent
 		graph2D.setPaint(Color.black);
 		repaint();
 	}
-	// public void clear(){
-		// graph2D.setPaint(Color.white);
-		// graph2D.fillRect(0, 0, getSize().width, getSize().height);
-		// graph2D.setPaint(Color.black);
-		// repaint();
-	// }
 	
+	public void rectangle()
+	{
+		addMouseMotionListener(new MouseMotionAdapter()
+		{
+			public void mouseDragged(MouseEvent e)
+			{
+				graph2D.setStroke(new BasicStroke(brushSize));
+				currentX = e.getX();
+				currentY = e.getY();
+				if(graph2D != null)
+				repaint();
+				// oldX = currentX;
+				// oldY = currentY;
+			}
+
+		});
+	}
+
 	public void black()
 	{
 		graph2D.setPaint(Color.black);
 		
 	}
 	
-	public void red()
+	public void purple()
 	{
-		graph2D.setPaint(Color.red);
-		
-	}
-	
-	public void orange()
-	{
-		graph2D.setPaint(Color.orange);
-		
-	}
-	
-	public void yellow()
-	{
-		graph2D.setPaint(Color.yellow);
-		
-	}
-	
-	public void green()
-	{
-		graph2D.setPaint(Color.green);
+		Color myPurple = new Color(229,204,255);
+		graph2D.setPaint(myPurple);
 		
 	}
 	
 	public void blue()
 	{
-		Color myBlue = new Color(30,144,255);
+		Color myBlue = new Color(204,230,255);
 		graph2D.setPaint(myBlue);
+		
+	}
+	
+	public void orange()
+	{
+		Color myOrange = new Color(255,230,204);
+		graph2D.setPaint(myOrange);
+		
+	}
+	
+	public void pink()
+	{
+		Color myPink = new Color(255,204,230);
+		graph2D.setPaint(myPink);
+		
+	}
+	
+	public void yellow()
+	{
+		Color myYellow = new Color(255,255,204);
+		graph2D.setPaint(myYellow);
 		
 	}
 	

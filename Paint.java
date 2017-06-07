@@ -29,44 +29,57 @@ public class Paint
 		
 		JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
-		buttonPanel.setPreferredSize(new Dimension(100,68));
+		buttonPanel.setPreferredSize(new Dimension(100,100));
+		
+		JPanel panel2 = new JPanel();
+		JButton b = new JButton();
+		b.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				drawing.rectangle();
+			}
+
+		}
+		);
+		panel2.add(b);
 		
 		//buttons
 		Dimension d = new Dimension(120,70);
 		
 		JButton buttonOne = new JButton();
-		// buttonOne.setText("RED");
-		buttonOne.setBackground(Color.red);
+		Color myPurple = new Color(229,204,255); 
+		buttonOne.setBackground(myPurple);
 		buttonOne.setMaximumSize(d);
 		buttonOne.setMinimumSize(d);
 		buttonOne.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.red();
+				drawing.purple();
 			}
 
 		}
 		);
 		
 		JButton buttonTwo = new JButton();
-		// buttonTwo.setText("YELLOW");
-		buttonTwo.setBackground(Color.yellow);
+		Color myBlue = new Color(204,230,255);
+		buttonTwo.setBackground(myBlue);
 		buttonTwo.setMinimumSize(d);
 		buttonTwo.setMaximumSize(d);
 		buttonTwo.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.yellow();
+				drawing.blue();
 			}
 
 		}
 		);
 		
 		JButton buttonThree = new JButton();
-		// buttonThree.setText("ORANGE");
-		buttonThree.setBackground(Color.orange);
+		Color myOrange = new Color(255,230,204);
+		buttonThree.setBackground(myOrange);
 		buttonThree.setMinimumSize(d);
 		buttonThree.setMaximumSize(d);
 		buttonThree.addActionListener(new ActionListener()
@@ -80,31 +93,30 @@ public class Paint
 		);
 		
 		JButton buttonFour = new JButton();
-		// buttonFour.setText("GREEN");
-		buttonFour.setBackground(Color.green);
+		Color myPink = new Color(255,204,230);
+		buttonFour.setBackground(myPink);
 		buttonFour.setMinimumSize(d);
 		buttonFour.setMaximumSize(d);
 		buttonFour.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.green();
+				drawing.pink();
 			}
 
 		}
 		);
 		
 		JButton buttonFive = new JButton();
-		// buttonFive.setText("BLUE");
-		Color myBlue = new Color(30,144,255);
-		buttonFive.setBackground(myBlue);
+		Color myYellow = new Color(255,255,204);
+		buttonFive.setBackground(myYellow);
 		buttonFive.setMinimumSize(d);
 		buttonFive.setMaximumSize(d);
 		buttonFive.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.blue();
+				drawing.yellow();
 			}
 
 		}
@@ -159,7 +171,7 @@ public class Paint
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.brushSize = 1;
+				drawing.brushSize = 2;
 			}
 
 		}
@@ -203,6 +215,7 @@ public class Paint
 		
 		container.add(buttonPanel, BorderLayout.WEST);
 		container.add(drawing, BorderLayout.CENTER);
+		container.add(panel2, BorderLayout.EAST);
 	}
 	
 }
