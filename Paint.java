@@ -184,7 +184,7 @@ public class Paint
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				drawing.brushSize = 30;
+				drawing.brushSize = 10;
 			}
 
 		}
